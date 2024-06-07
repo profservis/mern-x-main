@@ -72,6 +72,8 @@ yarn run create:layout YourLayoutName
 Project Structure 
 
 ```php
+
+
 mern-x/
 │
 ├── app/                                      
@@ -79,66 +81,82 @@ mern-x/
 │   │   ├── cli.js
 │   │   ├── config.js
 │   │
-│   ├── controllers
+│   ├── controllers/
 │   │   ├── todoController.js
+|   |   ├── orderController.js
+|   |   ├── serviceController.js
+|   |   ├── userController.js
 │   │
-│   ├── middlewares
+│   ├── middlewares/
+|   |   ├── auth.js
 │   │   ├── authMiddleware.js
 │   │
-│   ├── models
+│   ├── models/
+|   |   ├── Order.js
+|   |   ├── Service.js
+|   |   ├── User.js
 │   │   ├── todosModel.js
 │   │
 │   ├── storage/
+|   |   ├── mernx.png 
 │   │
 │   ├── utility/
 │   │   ├── emailUtility.js
 │   │   ├── tokenUtility.js
 │   │   ├── validationUtility.js
 │   │
-│   ├── dist/
+├── dist/
+|   ├── assets/  
+|   |   ├── index-aVgW1VgF.css
+|   |   ├── index-CJBxkZHF.js
+|   ├── images/
+|   |   ├── mernx.png
+|   |   index.html
+|   |
+├── public/
+|   ├── images/
+|   |   ├── mernx.png          
 │   │
-│   ├── node_modules/
+├── routes/
+│   ├── api.js
+|   ├── authRoutes.js
+|   ├── orderRoutes.js
+|   ├── serviceRoutes.js  
+│   ├── web.jsx
 │   │
-│   ├── public/
-│   │
-│   ├── routes/
-│   │   ├── api.js
-│   │   ├── web.jsx
-│   │
-│   ├── views/
-│   │   ├── assets/
-│   │   │   ├── css/
-│   │   │   │    ├── style.js
+├── views/
+│   ├── assets/
+│   │   ├── css/
+│   │   │    ├── style.js
 │   │     
-│   │   ├── components/
-│   │   │   ├── CreateForm.jsx
-│   │   │   ├── List.jsx 
+│   ├── components/
+│   │   ├── CreateForm.jsx
+│   │   ├── List.jsx 
 │   │   
-│   │   ├── layout/
-│   │   │   ├── AppLayout.jsx
-│   │   │
-│   │   
-│   │   ├── loader/
-│   │   │   ├── ListLoader.jsx
+│   ├── layout/
+│   │   ├── AppLayout.jsx
+│   │ 
+│   ├── loader/
+│   │   ├── ListLoader.jsx
 │   │   │ 
-│   │   ├── pages/
-│   │   │   ├── CreatePage.jsx
-│   │   │   ├── ListPage.jsx 
-│   │     
-│   │   ├── main.jsx  
+│   ├── pages/
+│   │   ├── CreatePage.jsx
+│   │   ├── ListPage.jsx 
+│   │   ├── Services.js
+│   ├── main.js  
+│   ├── main.jsx
 │   │
-│   │
-│   ├── .gitattributes
-│   ├── .gitignore
-│   ├── app.js
-│   ├── index.html
-│   ├── LICENSE
-│   ├── package.json
-│   ├── package-lock.json
-│   ├── postcss.config.js
-│   ├── README.md
-│   ├── tailwind.config.js
-│   ├── vite.config.js
+├── .gitattributes
+├── .gitignore
+├── app.js
+├── index.html
+├── LICENSE
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+├── README.md
+├── tailwind.config.js
+├── vite.config.js
 ```
 
 
