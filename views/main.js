@@ -1,9 +1,9 @@
-// views/index.js
+// views/main.js
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import "./assets/css/style.css";
+import "../assets/css/style.css";
 import 'react-loading-skeleton/dist/skeleton.css';
-import Main from './main.jsx';  // Импортируем новый Main компонент
+import Main from './views/main.jsx';  // Импортируем новый Main компонент
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

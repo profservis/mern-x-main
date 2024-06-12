@@ -5,21 +5,21 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-	"dev": "vite",
-	"build": "vite build",
-	"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-	"preview": "vite preview",
-	"mern": "node app/config/cli.js run:mernx",
-	"create:model": "node app/config/cli.js make:model",
-	"create:controller": "node app/config/cli.js make:controller",
-	"create:middleware": "node app/config/cli.js make:middleware",
-	"create:page": "node app/config/cli.js make:page",
-	"create:component": "node app/config/cli.js make:component",
-	"create:loader": "node app/config/cli.js make:loader",
-	"create:layout": "node app/config/cli.js make:layout",
-	"start": "node app.js",
-	"backend": "nodemon app.js",
-	"dev:all": "concurrently \"npm run backend\" \"npm run dev\""
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "mern": "node app/config/cli.js run:mernx",
+    "create:model": "node app/config/cli.js make:model",
+    "create:controller": "node app/config/cli.js make:controller",
+    "create:middleware": "node app/config/cli.js make:middleware",
+    "create:page": "node app/config/cli.js make:page",
+    "create:component": "node app/config/cli.js make:component",
+    "create:loader": "node app/config/cli.js make:loader",
+    "create:layout": "node app/config/cli.js make:layout",
+    "start": "node app.js",
+    "backend": "nodemon app.js",
+    "dev:all": "concurrently \"npm run backend\" \"npm run dev\""
   },
   "keywords": [
     "MERN",
@@ -33,8 +33,10 @@
   "author": "MERN-X",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^6.2.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.18.2",
     "express-rate-limit": "^7.1.5",
     "express-validator": "^7.0.1",
@@ -44,14 +46,13 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.1.1",
     "nodemailer": "^6.9.9",
+    "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
     "react-icons": "^5.0.1",
     "react-loading-skeleton": "^3.4.0",
-    "react-router-dom": "^6.22.0",
-	 "concurrently": "^6.2.1",
-	 "path": "^0.12.7"
+    "react-router-dom": "^6.22.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
@@ -59,11 +60,10 @@
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.17",
     "chokidar": "^3.6.0",
+    "eslint": "^7.12.1",
+    "nodemon": "^2.0.6",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
-    "vite": "^5.0.8",
-	 "eslint": "^7.12.1",
-    "nodemon": "^2.0.6"
-
+    "vite": "^5.0.8"
   }
 }
