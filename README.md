@@ -123,40 +123,40 @@ mern-x/
 |   ├── serviceRoutes.js  
 │   ├── web.jsx
 │   │
-│   ├── views/
-│   │   ├── assets/
-│   │   │   ├── css/
-│   │   │   │    ├── style.js
-│   │     
+├── views/
+│   ├── assets/
+│   │   ├── css/
+│   │   │   ├── style.css
+│   │   |  
 │   ├── components/
 │   │   ├── CreateForm.jsx
 │   │   ├── List.jsx 
 │   │   
-│   │   ├── layout/
-│   │   │   ├── AppLayout.jsx
-│   │   │
+│   ├── layout/
+│   │   ├── AppLayout.jsx
 │   │   
-│   │   ├── loader/
-│   │   │   ├── ListLoader.jsx
-│   │   │ 
-│   │   ├── pages/
-│   │   │   ├── CreatePage.jsx
-│   │   │   ├── ListPage.jsx 
-│   │     
-│   │   ├── main.jsx  
-│   │
-│   │
-│   ├── .gitattributes
-│   ├── .gitignore
-│   ├── app.js
-│   ├── index.html
-│   ├── LICENSE
-│   ├── package.json
-│   ├── package-lock.json
-│   ├── postcss.config.js
-│   ├── README.md
-│   ├── tailwind.config.js
-│   ├── vite.config.js
+│   │   
+│   ├── loader/
+│   │   ├── ListLoader.jsx
+│   │   
+│   ├── pages/
+│   │   ├── CreatePage.jsx
+│   │   ├── ListPage.jsx 
+│   │   ├── Services.jsx
+│   ├── main.js  
+│   ├── main.jsx
+│   
+├── .gitattributes
+├── .gitignore
+├── app.js
+├── index.html
+├── LICENSE
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+├── README.md
+├── tailwind.config.js
+├── vite.config.js
 ```
 
 
