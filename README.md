@@ -72,6 +72,8 @@ yarn run create:layout YourLayoutName
 Project Structure 
 
 ```php
+
+
 mern-x/
 │
 ├── app/                                      
@@ -85,8 +87,8 @@ mern-x/
 |   |   ├── serviceController.js
 |   |   ├── userController.js
 │   │
-│   ├── middlewares/
-|   |   ├── authMiddleware.js
+│   ├── middlewares
+│   │   ├── authMiddleware.js
 │   │
 │   ├── models/
 |   |   ├── Order.js
@@ -121,40 +123,40 @@ mern-x/
 |   ├── serviceRoutes.js  
 │   ├── web.jsx
 │   │
-├── views/
-│   ├── assets/
-│   │   ├── css/
-│   │       ├── style.css
+│   ├── views/
+│   │   ├── assets/
+│   │   │   ├── css/
+│   │   │   │    ├── style.js
 │   │     
 │   ├── components/
 │   │   ├── CreateForm.jsx
 │   │   ├── List.jsx 
 │   │   
-│   ├── layout/
-│   │   ├── AppLayout.jsx
-│   │ 
-│   ├── loader/
-│   │   ├── ListLoader.jsx
-│   │    
-│   ├── pages/
-│   │   ├── CreatePage.jsx
-│   │   ├── ListPage.jsx 
-│   │   ├── Services.jsx
-│   ├── main.js  
-│   ├── main.jsx
+│   │   ├── layout/
+│   │   │   ├── AppLayout.jsx
+│   │   │
+│   │   
+│   │   ├── loader/
+│   │   │   ├── ListLoader.jsx
+│   │   │ 
+│   │   ├── pages/
+│   │   │   ├── CreatePage.jsx
+│   │   │   ├── ListPage.jsx 
+│   │     
+│   │   ├── main.jsx  
 │   │
-├── .env
-├── .gitattributes
-├── .gitignore
-├── app.js
-├── index.html
-├── LICENSE
-├── package.json
-├── package-lock.json
-├── postcss.config.js
-├── README.md
-├── tailwind.config.js
-├── vite.config.js
+│   │
+│   ├── .gitattributes
+│   ├── .gitignore
+│   ├── app.js
+│   ├── index.html
+│   ├── LICENSE
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── postcss.config.js
+│   ├── README.md
+│   ├── tailwind.config.js
+│   ├── vite.config.js
 ```
 
 
