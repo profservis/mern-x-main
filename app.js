@@ -1,35 +1,43 @@
 
+import express from 'express';
+import path from 'path';
 import dotenv from 'dotenv';
 dotenv.config();
 
-import express from 'express';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
 import mongoose from 'mongoose';
-import router from './routes/api.js';
 import rateLimit from 'express-rate-limit';
-import path from 'path';
 import helmet from 'helmet';
 import hpp from 'hpp';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import { MAX_JSON_SIZE, MONGODB_CONNECTION, PORT, REQUEST_LIMIT_NUMBER, REQUEST_LIMIT_TIME, URL_ENCODED, WEB_CACHE } from './app/config/config.js';
-import userRoutes from './routes/authRoutes.js';
 import serviceRoutes from './routes/serviceRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
 import authRoutes from './routes/authRoutes.js';
+import userRoutes from './routes/userRoutes.js';
+import router from './routes/api.js';
 
 const app = express();
 
-// Middlewares
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Middleware setup
 app.use(cors());
 app.use(helmet());
 app.use(hpp());
 app.use(cookieParser());
 app.use(express.json({ limit: MAX_JSON_SIZE }));
 app.use(express.urlencoded({ extended: URL_ENCODED }));
+
+// Rate limiting
 const limiter = rateLimit({ windowMs: REQUEST_LIMIT_TIME, max: REQUEST_LIMIT_NUMBER });
 app.use(limiter);
 
-// Web cache validation and conditional requests in HTTP
+// Web cache validation
 app.set('etag', WEB_CACHE);
 
 // MongoDB connection
@@ -59,3 +67,6 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
     console.log(`MERN-X Server Running on PORT ${PORT}`);
 });
+
+
+

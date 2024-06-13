@@ -1,5 +1,3 @@
-//04 июня 2024
-
 import User from '../models/User.js';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
@@ -55,3 +53,36 @@ export const login = async (req, res) => {
   }
 };
 
+// Профиль пользователя
+export const getUserProfile = async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id).select('-password');
+    res.json(user);
+  } catch (error) {
+    res.status(500).json({ message: 'Error retrieving user profile', error: error.message });
+  }
+};
+
+// Обновление профиля пользователя
+export const updateUserProfile = async (req, res) => {
+  try {
+    const { username, password } = req.body;
+
+    const user = await User.findById(req.user.id);
+
+    if (user) {
+      user.username = username || user.username;
+
+      if (password) {
+        user.password = await bcrypt.hash(password, 10);
+      }
+
+      const updatedUser = await user.save();
+      res.json({ message: 'User updated successfully', user: updatedUser });
+    } else {
+      res.status(404).json({ message: 'User not found' });
+    }
+  } catch (error) {
+    res.status(500).json({ message: 'Error updating user profile', error: error.message });
+  }
+};
