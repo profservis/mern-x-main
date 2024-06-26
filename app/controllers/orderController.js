@@ -1,5 +1,6 @@
+//app\controllers\orderController.js
 import Order from '../models/Order.js';
-import sendEmail from '../utils/sendEmail.js';
+import sendEmail from '../utility/emailUtility.js'; //C:\OpenServer\domains\mern\mern-x-main\app\utility\emailUtility.js
 
 export const createOrder = async (req, res) => {
   try {
@@ -32,3 +33,5 @@ export const getOrder = async (req, res) => {
     res.status(500).send('Error fetching order');
   }
 };
+
+

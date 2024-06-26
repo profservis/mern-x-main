@@ -1,11 +1,11 @@
 //04 июня 2024
-
+//routes\authRoutes.js
 import express from 'express';
-import { register, login } from '../controllers/userController.js';
+import { registerUser, loginUser } from '../app/controllers/userController.js';
 
 const router = express.Router();
 
-router.post('/register', register);
-router.post('/login', login);
+router.post('/register', registerUser);
+router.post('/login', loginUser);
 
 export default router;

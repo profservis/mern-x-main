@@ -1,3 +1,4 @@
+//views/pages/ListPage.jsx
 import React from 'react';
 import List from "../components/List.jsx";
 import AppLayout from "../layout/AppLayout.jsx";

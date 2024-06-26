@@ -1,3 +1,4 @@
+//utility\emailUtility.js
 import nodemailer from 'nodemailer';
 import {EMAIL_HOST, EMAIL_PASSWORD, EMAIL_PORT, EMAIL_USER} from "../config/config.js";
 

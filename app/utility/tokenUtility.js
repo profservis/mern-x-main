@@ -39,6 +39,7 @@ export const DecodeToken = (token) => {
     }
 }; */
 
+//utility\tokenUtility.js
 import jwt from 'jsonwebtoken';
 import { JWT_EXPIRATION_TIME, JWT_SECRET } from "../config/config.js";
 

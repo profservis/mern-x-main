@@ -18,9 +18,9 @@ export const REQUEST_LIMIT_NUMBER = 3000; // Per 15 Min 3000 Request Allowed
 export const WEB_CACHE = false;
 
 export const PORT = 3000; */
-
-// config/config.js
-export const MONGODB_CONNECTION = process.env.MONGODB_CONNECTION || "mongodb+srv://mrrabbil:mernx123@cluster0.mongodb.net/app_todo?retryWrites=true&w=majority";
+//"mongodb+srv://mrrabbil:mernx123@cluster0.mongodb.net/app_todo?retryWrites=true&w=majority";
+// config.js
+export const MONGODB_CONNECTION = process.env.MONGODB_CONNECTION ||"mongodb://localhost:27017/admin";
 export const JWT_SECRET = process.env.JWT_SECRET || "your-random-secret-key";
 export const JWT_EXPIRATION_TIME = process.env.JWT_EXPIRATION_TIME || 60*60*24*30; // 30 дней
 export const EMAIL_HOST = process.env.EMAIL_HOST || "";

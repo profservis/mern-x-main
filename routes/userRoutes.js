@@ -1,8 +1,7 @@
 // routes/userRoutes.js
 import express from 'express';
-import { registerUser, loginUser, getUserProfile, updateUserProfile } from '../controllers/userController.js';
-import { authenticateJWT } from '../middleware/authMiddleware.js';
-
+import { registerUser, loginUser, getUserProfile, updateUserProfile } from '../app/controllers/userController.js';
+import { authenticateJWT } from '../app/middlewares/authMiddleware.js';
 const router = express.Router();
 
 // Routes

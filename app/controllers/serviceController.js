@@ -1,6 +1,6 @@
 //04 июня 2024
 
-import Service from '../models/Service.js';
+/* import Service from '../models/Service.js';
 
 export const createService = async (req, res) => {
   // Service creation logic
@@ -8,14 +8,14 @@ export const createService = async (req, res) => {
 
 export const getServices = async (req, res) => {
   // Get list of services
-};
+}; */
 
 
 
 // controllers/serviceController.js
-const Service = require('../models/Service');
+import Service from '../models/Service.js';
 
-exports.createService = async (req, res) => {
+export const createService = async (req, res) => {
   try {
     const { title, description, price, duration } = req.body;
     const service = new Service({ title, description, price, duration, provider: req.user.id });
@@ -26,7 +26,7 @@ exports.createService = async (req, res) => {
   }
 };
 
-exports.getServices = async (req, res) => {
+export const getServices = async (req, res) => {
   try {
     const services = await Service.find().populate('provider', 'username');
     res.status(200).json(services);

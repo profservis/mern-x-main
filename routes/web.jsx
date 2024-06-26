@@ -1,3 +1,4 @@
+//routes\web.jsx
 import React from 'react';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ListPage from "../views/pages/ListPage.jsx";

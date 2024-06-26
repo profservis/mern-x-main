@@ -20,6 +20,10 @@ export default (req, res, next) => {
     }
 }; */
 
+//Создадим промежуточное ПО для проверки JWT токенов и роли пользователя.
+
+//middlewares\authMiddleware.js
+// middlewares/authMiddleware.js
 import { DecodeToken } from "../utility/tokenUtility.js";
 
 export const authenticateJWT = (req, res, next) => {
@@ -52,6 +56,16 @@ export const isProvider = (req, res, next) => {
         return res.status(403).json({ message: 'Access denied: Providers only.' });
     }
 };
+
+export const isCustomer = (req, res, next) => {
+    // логика проверки, является ли пользователь клиентом
+    if (req.headers.role === 'customer') {
+        return next();
+    } else {
+        return res.status(403).json({ message: 'Access denied: Customers only.' });
+    }
+};
+
 
 
 

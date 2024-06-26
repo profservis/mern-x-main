@@ -1,10 +1,13 @@
+//Создание контроллеров
+//Контроллеры будут обрабатывать логику для регистрации, авторизации, создания услуг и заказов.
+//controllers\userController.js
 import User from '../models/User.js';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { JWT_SECRET, JWT_EXPIRATION_TIME } from '../config/config.js';
 
 // Регистрация
-export const register = async (req, res) => {
+export const registerUser = async (req, res) => {
   try {
     const { username, password, role } = req.body;
 
@@ -28,7 +31,7 @@ export const register = async (req, res) => {
 };
 
 // Авторизация
-export const login = async (req, res) => {
+export const loginUser = async (req, res) => {
   try {
     const { username, password } = req.body;
 

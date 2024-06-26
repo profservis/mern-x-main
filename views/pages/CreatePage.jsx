@@ -1,3 +1,4 @@
+//views/pages/CreatePage.jsx
 import React from 'react';
 import CreateForm from "../components/CreateForm.jsx";
 import AppLayout from "../layout/AppLayout.jsx";

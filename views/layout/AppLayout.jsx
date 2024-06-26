@@ -1,3 +1,4 @@
+//views/layout/AppLayout.jsx
 import React from 'react';
 import {Toaster} from "react-hot-toast";
 
